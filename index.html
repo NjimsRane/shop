@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="NjimsRane">
+    <title>NjimsRane-Store</title>
+    <link rel="stylesheet" href="./dist/style.css">
+</head>
+
+<body>
+    <!-- header section start -->
+    <header class='header'>
+        <a href="./index.html" class="header__logo">Njims<span>Rane</span></a>
+        <nav class='header__nav' id="nav-menu">
+            <ul class="header__menuList">
+                <li><a href="#">home</a></li>
+                <li><a href="#">shop</a></li>
+                <li><a href="#">blog</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">contact</a></li>
+            </ul>
+        </nav>
+        <div class="header__utilities">
+            <a href="#">
+                <img src="./IMG/icons/shopping-bag.png" alt="shopping-bag" width="30">
+                <span>0</span>
+            </a>
+            <div class="header__hamburgerMenu" id="hamburger-menu">
+                <div class="header__hamburger hamburger"></div>
+                <div class="header__hamburger hamburger"></div>
+                <div class="header__hamburger hamburger"></div>
+            </div>
+        </div>
+    </header>
+    <!-- header section end -->
+
+    <!-- hero section start -->
+    <div class="hero">
+        <img src="./IMG/hero4.png" alt="" class="hero__image">
+        <div class="hero__text">
+            <h5>Trade-in-offer</h5>
+            <h3>Super value deals</h3>
+            <h2>On all products</h2>
+            <p>Save more with coupons &amp; up to 80% off!</p>
+
+            <a href="#" aria-label="link to shop" class="hero__shop">
+                <img src="./IMG/button.png" alt="button image">
+                <span>shop more</span>
+            </a>
+        </div>
+    </div>
+    <!-- hero section end -->
+
+
+    <!-- main section start -->
+    <main class="main">
+        <!-- brand section start -->
+        <section class="main__brand">
+            <img src="./IMG/brands-logo/adidas.png" alt="adidas">
+            <img src="./IMG/brands-logo/nike.png" alt="nike">
+            <img src="./IMG/brands-logo/puma.png" alt="puma">
+            <img src="./IMG/brands-logo/converse.png" alt="converse">
+        </section>
+        <!-- brand section end -->
+
+
+        <!-- latest-products section start -->
+        <section class="main__products">
+            <h2 class="main__products-title">our new collection</h2>
+            <div class="main__products-latest" id="products-container">
+                <div class="main__products-card">
+                    <img src="./IMG/shoes/s1.jpg" alt="shoe">
+                    <div class="main__products-details">
+                        <h3 class="main__products-brand">adidas</h3>
+                        <p class="main__products-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            In
+                            quod possimus a officia eaque vero voluptas ratione quia, quis numquam.</p>
+                        <div class="main__products-purchase">
+                            <p class="main__products-price">&dollar;<span> 45</span></p>
+                            <p class="main__products-quantity">
+                                <button>&minus;</button>
+                                12
+                                <button>&plus;</button>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- latest-products section end -->
+
+    </main>
+    <!-- main section end -->
+
+
+    <!-- script -->
+    <script src="./App/JS/newProducts.js"></script>
+    <script src="./App/JS/script.js"></script>
+</body>
+
+</html>

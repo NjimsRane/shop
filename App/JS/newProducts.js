@@ -1,53 +1,20 @@
-const newProductsData = [
-    {
-        id: 1,
-        img: './IMG/shoes/s1.jpg',
-        brand: 'adidas',
-        desc: 'Shoes ipsum dolor sit amet consectetur adipisicing elit. In quod possimus a officia eaque vero voluptas ratione quia, quis numquam.',
-        price: 45,
-    },
-    {
-        id: 2,
-        img: './IMG/jackets/j2.jpg',
-        brand: 'D&G',
-        desc: 'Jackets ipsum dolor sit amet consectetur adipisicing elit. In quod possimus a officia eaque vero voluptas ratione quia, quis numquam.',
-        price: 145,
-    },
-    {
-        id: 3,
-        img: './IMG/pants/p2.jpg',
-        brand: 'wrangler',
-        desc: 'Pants ipsum dolor sit amet consectetur adipisicing elit. In quod possimus a officia eaque vero voluptas ratione quia, quis numquam.',
-        price: 100,
-    },
-    {
-        id: 4,
-        img: './IMG/shirts/f1.jpg',
-        brand: 'Hawai',
-        desc: 'Shirt ipsum dolor sit amet consectetur adipisicing elit. In quod possimus a officia eaque vero voluptas ratione quia, quis numquam.',
-        price: 60,
-    },
-    {
-        id: 5,
-        img: './IMG/pull/b2.jpg',
-        brand: 'chanel',
-        desc: 'Pull ipsum dolor sit amet consectetur adipisicing elit. In quod possimus a officia eaque vero voluptas ratione quia, quis numquam.',
-        price: 30,
-    },
-];
+import { newProductsData } from './data.js';
+
 const productsContainer = document.getElementById('products-container');
 
 function load() {
     const newProduct = newProductsData.map((product) => {
+        // use array destructuring
+        const { id, img, price, desc, brand } = product;
         return (
-            `<div class="main__products-card">
-                    <img src=${product.img} alt=${product.brand}>
+            `<div id=product-id-${id} class="main__products-card">
+                    <img src=${img} alt=${brand}>
                     <div class="main__products-details">
-                        <h3 class="main__products-brand">${product.brand}</h3>
-                        <p class="main__products-description">${product.desc}</p>
+                        <h3 class="main__products-brand">${brand}</h3>
+                        <p class="main__products-description">${desc}</p>
                         <div class="main__products-purchase">
-                            <p class="main__products-price">&dollar;<span> ${product.price}</span></p>
-                            <p class="main__products-quantity">
+                            <p class="main__products-price">&dollar;<span> ${price}</span></p>
+                            <p id=${id} class="main__products-quantity">
                                 <button>&minus;</button>
                                 12
                                 <button>&plus;</button>

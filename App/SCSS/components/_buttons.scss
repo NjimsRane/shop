@@ -4,3 +4,13 @@ button{
     cursor: pointer;
     background-color:transparent;
 }
+
+.main__products-quantity button{
+    margin-inline:0.5rem;
+    opacity:0.5;
+    transition:var(--transition1);
+    
+    &:hover{
+        opacity: 1;
+    }
+}

@@ -1,13 +1,10 @@
 .main{
     padding:2rem;
-    display:flex;
-    flex-direction:column;
+    @include flexBox4;
     gap:1rem;
 
     &__brand{
-        display:flex;
-        align-items:center;
-        justify-content:center;
+        @include flexBox2;
         gap:3rem;
         margin-block:3rem;
 
@@ -17,8 +14,7 @@
     }
     /*************product section*******************/
     &__products{
-        display:flex;
-        flex-direction:column;
+        @include flexBox4;
         gap:2rem;
 
         &-title{
@@ -30,12 +26,11 @@
         &-latest{
             display:grid;
             justify-items:center;
-            gap:2rem;
-            grid-template-columns:1fr;
+            grid-template-columns:repeat(auto-fit,minmax(min(100%,26em),1fr));
+            gap:1em 2em;
         }
 
         &-card{
-            width:min(100%,26rem);
             height:36rem;
             box-shadow:var(--shadow1);
             border-radius:5px;
@@ -49,7 +44,7 @@
                 transition:var(--transition1);
 
                 &:hover{
-                    transform:scale(1.5);
+                    transform:scale(1.3);
                 }
             }
         }
@@ -79,17 +74,6 @@
         }
         &-quantity{
             font-size:1.2rem;
-            & button{
-                margin-inline:0.5rem;
-                opacity:0.5;
-                transition:var(--transition1);
-                
-                &:hover{
-                    opacity: 1;
-                }
-            }
         }
-
-       
     } 
 }
